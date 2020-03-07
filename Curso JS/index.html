@@ -1,0 +1,103 @@
+<html>
+    <heade>
+        <meta charset="UTF-8">
+        <title>Curso JavaScript</title>
+    </heade>
+    <body>
+        <div id='app'>
+            
+            <input type="text" name="nome"/>
+            <button class="botao">Adicionar</button>
+        </div>
+        <script>
+            var inputElement = document.querySelector('input')
+            var btnElement = document.querySelector('button.botao')
+            
+            btnElement.onclick = function mostraAlerta(){
+                var text = inputElement.value;
+
+                alert(text);
+            }
+        </script>
+        <!--<script>
+            // JavaScript
+            //================================//
+            //var x = 10, y = 5;
+
+            //x += 3; // Igual x = x + 3
+
+            //var resultado = x+y;
+            //console.log(resultado,x,y);
+            /*function soma (numero_1, numero_2){
+                var resultado = numero_1 + numero_2;
+                return resultado;
+            }
+            var resultado = soma(5,3);
+            console.log(resultado);*/
+
+            //=======================================//
+
+            /*function retorna_sexo_case (sexo){
+                //M, F
+                // Masculino, Feminino
+                switch(sexo){
+                    case 'M':
+                        return 'Homem';
+                    case 'F':
+                        return 'Mulher'
+                    default:
+                        return 'Outros';
+
+                }
+            }
+            
+            function retorna_sexo_if (sexo){
+                //M, F
+                // Masculino, Feminino
+                if(sexo === 'M'){
+                    return 'Masculino';
+                } else if (sexo === 'F'){
+                    return 'Feminino';
+                } else {
+                    return 'Outro';
+                }  
+                              
+            }
+        var resultado_if = retorna_sexo_if('F');
+        var resultado_case = retorna_sexo_case('F');
+        console.log(resultado_if,resultado_case);*/
+        //==============================================//
+
+        // AND: &&, OR: ||, NOT : !==
+
+        /*var sexo = 'F';
+        var masculino = sexo === 'M';
+        
+        console.log(masculino);*/
+
+        //=============================================//
+
+        // FOR, WHILE
+
+        /*for( var i=0; i<= 100; i++){
+            console.log(i);
+        }
+        var j = 4342342340;
+        while (j >50){
+            console.log(j);
+            j /= 5;
+        }*/
+
+        //===========================================//
+
+        // INTERVALO E TIMEOUT
+
+        function exibe_algo(){
+            console.log('Hello');
+        }
+        setTimeout(exibe_algo, 3000);
+        </script>-->
+
+    </body>
+    
+</html>

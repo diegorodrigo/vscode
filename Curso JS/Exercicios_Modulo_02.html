@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Exercicios Modulo 02</title>
+    </head>
+    <body>
+        <div id='boxInclude'>
+            <input type="text" id="nome"/>
+            <button onclick="adicionar()" id='btnAdd'>Adicionar</button>
+            <ul>
+                <li>Diego</li>
+                <li>Sophia</li>
+                <li>Gisele</li>
+            </ul>
+        </div>
+        <script>
+            var $lista = document.querySelector('ul');
+            var $txtInput = document.querySelector('#nome');
+            var $botao = document.querySelector('#btnAdd');                   
+
+            
+            function adicionar(){
+                var item = '<li>' + $txtInput.value + '</li>';
+                $lista.innerHTML += item;
+                $txtInput.value = '';
+                $txtInput.focus();
+            }
+            $txtInput.addEventListener('keyup', function(e){
+                console.log(e.keyCode);
+                if (e.keyCode === 13){
+                    adicionar();
+                }
+            })
+        </script>
+        <div id="app">
+            <button class="box">Criar box</button>            
+        </div>
+        <script>
+            var btnElement = document.querySelector('button.box');
+
+            btnElement.onclick = function(){
+                var boxElement = document.createElement('div');
+                boxElement.setAttribute('class','box2');
+                boxElement.style.width = 100;
+                boxElement.style.height = 100;
+                boxElement.style.backgroundColor = '#f00';
+                boxElement.style.marginTop = 1;
+                boxElement.onmouseover = function(){
+                    boxElement.style.backgroundColor = newColor;
+                }
+                function getRandomColor(){
+                    var letters = "01234567689ABCDEF";
+                    var color = "#";
+                    for(var i = 0; i < 6; i++){
+                        color += letters[Math.floor(Math.random() * 16)];
+                    }
+                    return color;                    
+                }   
+                         
+                var containerElement = document.querySelector('#app');
+                var newColor = getRandomColor();
+                containerElement.appendChild(boxElement);
+                
+                console.log(boxElement,btnElement);  
+            } 
+            
+        </script>
+    </body>
+</html>

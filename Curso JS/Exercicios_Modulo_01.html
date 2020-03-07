@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>Exercicios Modulo 01</title>
+
+    </head>
+
+    <body>
+        <script>
+            var endereco = {
+                rua: 'Murilo Mendes',
+                numero : 54,
+                bairro: 'Piratininga',
+                cidade: 'Itaqua',
+                uf: 'SP'
+            };
+            console.log('O usuário mora em', endereco.cidade, 
+                        '/', endereco.uf, 
+                        'no bairro', endereco.bairro, 
+                        'na rua', endereco.rua, 
+                        'com numero', endereco.numero);
+        </script>
+
+        <script>
+        function pares(x,y) {            
+            for (var i= x; i <= y; i++){
+                if(i % 2 === 0){
+                    console.log(i);
+                }
+            }               
+        }
+        pares(32, 321);
+            
+        </script>  
+        
+        <script>
+            
+            function TemHabilidade(skills) {
+               if(skills.indexOf('Javascript') !== -1){
+                   return console.log('É SKILL');                  
+               } else{
+                   return console.log ('NÃO É SKILL');
+               }
+            }        
+            var skills = ['Javascript', 'ReactJS', 'ReactNative'];
+            TemHabilidade(skills);
+        </script>
+
+        <script>
+            
+            function experiencia(anos) {
+                var anos = anosEstudo;
+                if(anos >= 0 && anos <=1){
+                    return console.log('Iniciante');
+                } else  if (anos >1 && anos <= 3){
+                    return console.log('Intermediario');
+                } else if (anos >3 && anos <=6){
+                    return console.log('Avançado');
+                } else{
+                    anos >= 7;
+                    return console.log('Jedi Master');
+                }
+            }
+            var anosEstudo = 7;
+            experiencia(anosEstudo);            
+        </script>
+        <script>
+            var usuarios = [
+                {
+                    nome: 'Diego',
+                    habilidades: ['Javascript', 'ReactJS', 'Redux']
+                },
+                {
+                    nome: 'Rodrigo',
+                    habilidades: ['VueJS', 'Ruby on Rails', 'Elixir']
+                }
+            ];
+            var descricao = usuarios;
+            for(var descricao of usuarios){
+                console.log('O',descricao.nome,'possui as habilidades:', descricao.habilidades.join([',']));
+            }
+        
+            
+            
+        </script>
+
+    </body>
+</html>
