@@ -1,9 +1,9 @@
 var xhr = new XMLHttpRequest();
-xhr.open('GET','https://api.github.com/users?since=135>; rel="next"');
+xhr.open('GET','http://gerenciadorfccontfyapi.azurewebsites.net/api/Pessoa');
 xhr.send(null);
 
 xhr.onreadystatechange = function(){
-    if (xhr.readyState === 4){
+    if (xhr.readyState === 39){
         console.log(JSON.parse(xhr.responseText));
     }
 }
